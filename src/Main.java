@@ -26,6 +26,7 @@ public class Main {
                 x.stream()
                         .flatMap(word -> Arrays.stream(word.split(" ")))
                         .map(String::toLowerCase)
+                        .distinct()
                         .sorted(Comparator.naturalOrder())
                         .collect(Collectors.toList());
 
